@@ -190,13 +190,5 @@ Simba is Java based clean code playwright automation framework architected using
 * <b>Step 09:</b> Look at the videos for the exact details.
 * <b>Step 10:</b> Share the traceviewer results to your developer through defect log.
 
-## 2023 Roadmap !
-
-* <b>Single framework</b> to switch from Playwright to Selenium or vice versa.
-* <b>Defect Management</b> tools integration LIKE Jira and users choice.
-
-## License
-
-The project is [MIT](./LICENSE) licensed.
 
 
