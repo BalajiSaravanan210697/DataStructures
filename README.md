@@ -66,22 +66,22 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
 
 ## Amazing Use cases Built for this Framework
 
-<details><summary> Debug Faster with Snaps with configurable options</summary>
+<details><summary>Debug Faster with Snaps with configurable options</summary>
 <ul>
  </br>
 <li>
-    &emsp; Reporter </b> provides full/partial snaps
+    &emsp; Reporter </b> provides full/partial snaps with Configuration only on failures
+  
 </li>
 <li>
     &emsp; Our framework allows configuration for framework user to enable on demand for every run or failures.
 </li>
   </br>
-  
-  ```java
-    // Sample code to control your delays
-    setRecordVideoDir(Paths.get(folderName));
-  ```
 
+   ```java
+   #snapshot - when? always | only on failure 
+   snap.action = only-on-failure
+  ```
 </ul>
 </details>
 <details><summary>Automated logins to avoid too many login tests</summary>
@@ -101,54 +101,45 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
   ```
 </ul>
 </details>
-<details><summary>Automated retries with different data with added wait</summary>
+<details><summary> Automated retries with different data with added wait</summary>
 <ul>
  </br>
 <li>
     &emsp;Configurable retries</b> with different wait using the TestNG listener upon failure of the earlier data.
 </li>
-<li>
-     &emsp;Configurable retries</b> with different browser using the TestNG listener upon failure of earlier browser.
-</li>
   </br>
 
   ```java
-  # Retry Switch
-  retry.data.switch = true
-  retry.browser.switch = false
+# The different pause timers 
+pause.low = 1000
+pause.medium = 5000
+pause.high = 10000
   ```
 </ul>
 </details>
-<details><summary> Automated test data generation/selection for your CRUD operations</summary>
+<details><summary> Automated test data generation </summary>
 <ul>
  </br>
 <li>
-    &emsp;Java Faker</b> is used to generate random test data for most of your CREATE requests.
-</li>
-<li>
-    &emsp;You can also use ENUM for the master data obtained using the API requests from server.
-</li>
-<li>
-    &emsp;For all idempotent requests, the framework allows you to read data using API, Excel.
+    &emsp;Java Faker</b> is used to generate random test data for TC's.
 </li>
   </br>
-  
-
+   ```java
+	faker.number().randomNumber(5, false);	
+  ```  
 </ul>
 </details>
 
 ## Framework - How does it execute tests?
 
-* <b>Step 01:</b> You run your designed testng xml with listeners.
+* <b>Step 01:</b> Run the Test cases using TestNG xml File (testng_Parallel (or) testng_Sequential) --> Click --> Run as TestNG 
 * <b>Step 02:</b> The testng annotations (@Before) initialize the setup.
-* <b>Step 03:</b> The playwright script invokes the browser and actions.
+* <b>Step 03:</b> The Selenium script invokes the browser and actions.
 * <b>Step 04:</b> Simulatenously, the reporting engine captures the result.
-* <b>Step 05:</b> Upon success completion, the videos, reports are published.
-* <b>Step 06:</b> Upon failure, the testng retry is invoked with different data/browser.
+* <b>Step 05:</b> Upon success completion reports are published under reports Folder.
+* <b>Step 06:</b> Upon failure, the testng retry is invoked with additional wait.
 * <b>Step 07:</b> Step 02 - 06 continues until success or max retries.
 * <b>Step 08:</b> Look at the results folder for html results.
-* <b>Step 09:</b> Look at the videos for the exact details.
-* <b>Step 10:</b> Share the traceviewer results to your developer through defect log.
 
 
 
