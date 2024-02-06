@@ -14,19 +14,14 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
   </thead>
   <tbody>
     <tr>
-      <td><b>Playwright</b></td>
-      <td><b>1.28.0</b></td>
-      <td><b>End to End Automation - Browser & API</b></td>
+      <td><b>Selenium</b></td>
+      <td><b>4.13.0</b></td>
+      <td><b>End to End Browser Automation/b></td>
     </tr>
     <tr>
       <td><b>TestNG</b></td>
       <td><b>7.4.0</b></td>
       <td><b>The Test Runner to execute suite</b></td>
-    </tr>
-    <tr>
-      <td><b>JSON</b></td>
-      <td><b>20220924</b></td>
-      <td><b>Create & Parse JSON Files for API</b></td>
     </tr>
     <tr>
       <td><b>Apache POI</b></td>
