@@ -141,5 +141,8 @@ pause.high = 10000
 * <b>Step 07:</b> Step 02 - 06 continues until success or max retries.
 * <b>Step 08:</b> Look at the results folder for html results.
 
+## Upcoming Enhancements with this Framework
 
+ * <b>BDD Adoption </b> can integrate the Cucumber BDD with this Framework using the Existing modules
+ * <b>CI/CD Integration</b> Rramework to be pushed into GIT integrated to Jenkins to acheive CI/CD.
 
