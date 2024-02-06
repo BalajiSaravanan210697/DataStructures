@@ -144,5 +144,5 @@ pause.high = 10000
 ## Upcoming Enhancements with this Framework
 
  * <b>BDD Adoption </b> can integrate the Cucumber BDD with this Framework using the Existing modules
- * <b>CI/CD Integration</b> Rramework to be pushed into GIT integrated to Jenkins to acheive CI/CD.
+ * <b>CI/CD Integration</b> Framework to be pushed into GIT integrated to Jenkins to acheive CI/CD.
 
