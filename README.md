@@ -1,6 +1,6 @@
-# Simba - Playwright Automation Framework
+# Bird Bank - Selenium Automation UI Framework
 
-Simba is Java based clean code playwright automation framework architected using several useful design patterns.
+Bird Bank is Java based clean code Selenium UI automation framework architected using several useful design patterns
 
 ## Software Dependencies
 
