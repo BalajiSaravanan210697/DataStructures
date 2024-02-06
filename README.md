@@ -16,7 +16,7 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
     <tr>
       <td><b>Selenium</b></td>
       <td><b>4.13.0</b></td>
-      <td><b>End to End Browser Automation/b></td>
+      <td><b>End to End Browser Automation</b></td>
     </tr>
     <tr>
       <td><b>TestNG</b></td>
@@ -46,69 +46,34 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
   </tbody>
 </table>
 
-## Design Pattern Used
+## Design Patterns Used
 
  * <b>Factory Pattern</b> is used to reuse existing browser contexts instead of rebuilding them each time.
- * <b>Bridge pattern</b> is used to switch implementations between UI and API at runtime.
- * <b>Decorator pattern</b> is used to assign extra behaviors like highlight, retry .. to pages & elements at runtime without breaking the code that uses these objects.
- * <b>Chain of Responsibility pattern</b> is used to navigate from a pattern/page to other.
- * <b>Observer pattern</b> is used to switch to different data, browser on failure when retried.
+ * <b>Bridge pattern</b> is used to switch implementations between UI at runtime.
+ * <b>Decorator pattern</b> is used to assign extra behaviors like highlight, retry to pages & elements at runtime without breaking the code that uses these objects.
+ * <b>Chain of Responsibility pattern</b>is used to navigate from a pattern/page to other.
+ * <b>Observer pattern</b> is used to switch to different data and added wait on failure when retried.
 
-## Framework - How to design your new test?
+## Framework - How to design new test cases using this framework?
 
-* <b>Step 1:</b> Use the main source for the framework desaign.
-* <b>Step 2:</b> Refer the test source for the sample test code (Salesforce).
-* <b>Step 3:</b> Create your own app instance url and update the config.
-* <b>Step 4:</b> Build your pages like the sample using the right method and locator.
-* <b>Step 5:</b> Use the test data in your tests from faker or API or excel.
-* <b>Step 6:</b> Build your tests using the pages
-* <b>Step 7:</b> Once ready, run in the debug mode and look at the logs for details
+* <b>Step 1:</b> Use the main source for the framework design.
+* <b>Step 2:</b> Refer the test source for the sample test code (Bird Bank).
+* <b>Step 3:</b> Build your pages like the sample using the right method and locator.
+* <b>Step 4:</b> Use the test data in your tests from faker or excel.
+* <b>Step 5:</b> Build your tests using the pages.
+* <b>Step 6:</b> Once ready, run in the debug mode and look at the logs for details.
 
-## Amazing Usecases that you should try !
 
-<details><summary>✅  Single framework for both UI 🧭 and API Automation</summary>
+## Amazing Use cases Built for this Framework
+
+<details><summary> Debug Faster with Snaps with configurable options</summary>
 <ul>
  </br>
 <li>
-    &emsp;Single framework</b> designed using bridge pattern to allow conversation between UI and API simultaneously.
+    &emsp; Reporter </b> provides full/partial snaps
 </li>
 <li>
-    &emsp;You can create data using API and use that data to your UI tests to make your tests independent.
-</li>
-<li>
-    &emsp;Your UI tests can execute the test and as part of the assertions, it make sense to validate using API.
-</li>
-  </br>
-  
-
-</ul>
-</details>
-
-<details><summary>✅ Fastest test execution 🚀 with configurable speed control</summary>
-<ul>
-   </br>
-   <li>Playwright engine is comparatively (above 30% on average) faster than other UI automation frameworks.
-   </li>
-   <li>Sometimes it requires a slow down to eliminate the script flakiness with configurable speed included through the listeners.
-   </li>
-  </br>
-  
-  ```java
-    // Sample code to control your delays
-    setSlowMo(ConfigurationManager.configuration().slowMotion());
-  ```
-  
-</ul>
-</details>
-
-<details><summary>✅  Debug Faster with Snaps, Videos 🎥 and Tracings with configurable options</summary>
-<ul>
- </br>
-<li>
-    &emsp; Playwright library</b> provides full/partial snaps, videos (webm) and trace viewer that captures network calls.
-</li>
-<li>
-    &emsp; Our framework allows configuration for framework user to either plugin on demand for every run or failures.
+    &emsp; Our framework allows configuration for framework user to enable on demand for every run or failures.
 </li>
   </br>
   
@@ -119,7 +84,7 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
 
 </ul>
 </details>
-<details><summary>✅  Automated logins 💡 to avoid too many login tests</summary>
+<details><summary>Automated logins to avoid too many login tests</summary>
 <ul>
  </br>
 <li>
@@ -136,11 +101,11 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
   ```
 </ul>
 </details>
-<details><summary>✅  Automated retries 🔁 with different browser and/or data</summary>
+<details><summary>Automated retries with different data with added wait</summary>
 <ul>
  </br>
 <li>
-    &emsp;Configurable retries</b> with different data using the TestNG listener upon failure of the earlier data.
+    &emsp;Configurable retries</b> with different wait using the TestNG listener upon failure of the earlier data.
 </li>
 <li>
      &emsp;Configurable retries</b> with different browser using the TestNG listener upon failure of earlier browser.
@@ -154,7 +119,7 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
   ```
 </ul>
 </details>
-<details><summary>✅  Automated test data generation/selection for your CRUD operations</summary>
+<details><summary> Automated test data generation/selection for your CRUD operations</summary>
 <ul>
  </br>
 <li>
