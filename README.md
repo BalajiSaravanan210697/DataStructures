@@ -119,7 +119,7 @@ pause.high = 10000
 
 ## Framework - How does it execute tests?
 
-* <b>Step 01:</b> Run the Test cases using TestNG xml File (testng.xml) --> Click --> Run as TestNG 
+* <b>Step 01:</b> Run the Test cases using TestNG xml File (testng.xml (or) testng_Parallel) --> Click --> Run as TestNG 
 * <b>Step 02:</b> The testng annotations (@Before) initialize the setup.
 * <b>Step 03:</b> The Selenium script invokes the browser and actions.
 * <b>Step 04:</b> Simulatenously, the reporting engine captures the result.
