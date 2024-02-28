@@ -1,6 +1,6 @@
-# Bird Bank - Selenium Automation UI Framework
+# Deriv OrangeHRM - Selenium Automation UI Framework
 
-Bird Bank is Java based clean code Selenium UI automation framework architected using several useful design patterns
+Deriv OrangeHRM is Java based clean code Selenium UI automation framework architected using several useful design patterns
 
 ## Software Dependencies
 
@@ -48,7 +48,7 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
 
 ## Design Patterns Used
 
- * <b>Factory Pattern</b> is used to reuse existing browser contexts instead of rebuilding them each time.
+
  * <b>Bridge pattern</b> is used to switch implementations between UI at runtime.
  * <b>Decorator pattern</b> is used to assign extra behaviors like highlight, retry to pages & elements at runtime without breaking the code that uses these objects.
  * <b>Chain of Responsibility pattern</b>is used to navigate from a pattern/page to other.
@@ -57,7 +57,7 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
 ## Framework - How to design new test cases using this framework?
 
 * <b>Step 1:</b> Use the main source for the framework design.
-* <b>Step 2:</b> Refer the test source for the sample test code (Bird Bank).
+* <b>Step 2:</b> Refer the test source for the sample test code.
 * <b>Step 3:</b> Build your pages like the sample using the right method and locator.
 * <b>Step 4:</b> Use the test data in your tests from faker or excel.
 * <b>Step 5:</b> Build your tests using the pages.
@@ -84,23 +84,7 @@ Bird Bank is Java based clean code Selenium UI automation framework architected 
   ```
 </ul>
 </details>
-<details><summary>Automated logins to avoid too many login tests</summary>
-<ul>
- </br>
-<li>
-    &emsp;Configurable automated logins</b> can avoid unnecessary login tests through storing the state of the user.
-</li>
-<li>
-    &emsp;The user can either use the existing login storage or decide to login automated through configuration.
-</li>
-  </br>
 
-  ```java
-  # Auto Login
-  auto.login = true
-  ```
-</ul>
-</details>
 <details><summary> Automated retries with different data with added wait</summary>
 <ul>
  </br>
@@ -125,14 +109,17 @@ pause.high = 10000
 </li>
   </br>
    ```java
-	faker.number().randomNumber(5, false);	
+	Date randomDate = faker.date().birthday();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String formattedDate = dateFormat.format(randomDate);
+        return "" + faker.date().birthday(formattedDate);
   ```  
 </ul>
 </details>
 
 ## Framework - How does it execute tests?
 
-* <b>Step 01:</b> Run the Test cases using TestNG xml File (testng_Parallel (or) testng_Sequential) --> Click --> Run as TestNG 
+* <b>Step 01:</b> Run the Test cases using TestNG xml File (testng.xml) --> Click --> Run as TestNG 
 * <b>Step 02:</b> The testng annotations (@Before) initialize the setup.
 * <b>Step 03:</b> The Selenium script invokes the browser and actions.
 * <b>Step 04:</b> Simulatenously, the reporting engine captures the result.
@@ -145,4 +132,22 @@ pause.high = 10000
 
  * <b>BDD Adoption </b> can integrate the Cucumber BDD with this Framework using the Existing modules
  * <b>CI/CD Integration</b> Framework to be pushed into GIT integrated to Jenkins to acheive CI/CD.
+ * <b>Reuse Existing Session </b> is used to reuse existing browser contexts instead of rebuilding them each time.
+<details><summary>Automated logins to avoid too many login tests</summary>
+<ul>
+ </br>
+<li>
+    &emsp;Configurable automated logins</b> can avoid unnecessary login tests through storing the state of the user.
+</li>
+<li>
+    &emsp;The user can either use the existing login storage or decide to login automated through configuration.
+</li>
+  </br>
+
+  ```java
+  # Auto Login
+  auto.login = true
+  ```
+</ul>
+</details>
 
